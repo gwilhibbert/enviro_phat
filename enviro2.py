@@ -8,9 +8,9 @@ start_time=time.time()
 current_time=start_time
 
 try:
-    while current_time<=(start_time+run+time):
+    while current_time<=(start_time+run_time):
         acc = str(motion.accelerometer())[1:-1].replace(' ', '')
-        out.write('%f\n' % (acc))
+        out.write(str(acc)+"\n")
         current_time=time.time()
         time.sleep(0.1)
 
